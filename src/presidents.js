@@ -463,7 +463,6 @@ function getAgeAtInauguration(presidentsArr) {
     president.ageAtInauguration = president.tookOffice - president.birthYear;
     newArr.push(president)
   })
-  // console.log(newArr)
   return newArr;
 }
 
@@ -475,13 +474,26 @@ function getPresidentsBornAfter(presidentsArr, year) {
 
 // Bonus: Iteration 7 | Count Republican Presidents
 function countRepublicanPresidents(presidentsArr) {
+  // return presidentsArr.reduce((total,president) => total + (president.party === "Republican" ? 1 : 0), 0)
+
   return presidentsArr.reduce((total, president) => {
-    let currArr = [];
-    if(president.party === "Republican"){
-      currArr.push(president)
+    if(president.party === 'Republican'){
+      return total + 1;
+    } else{
+      return total + 0
     }
-    return total + currArr.length;
-  },0)
+  }, 0)
+
+
+
+
+  // return presidentsArr.reduce((total, president) => {
+  //   let currArr = [];
+  //   if(president.party === "Republican"){
+  //     currArr.push(president)
+  //   }
+  //   return total + currArr.length;
+  // },0)
 }
 
 // Bonus: Iteration 8 | Sort Presidents by Name - `sort()`
