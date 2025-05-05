@@ -488,17 +488,6 @@ function countRepublicanPresidents(presidentsArr) {
       return total + 0
     }
   }, 0)
-
-
-
-
-  // return presidentsArr.reduce((total, president) => {
-  //   let currArr = [];
-  //   if(president.party === "Republican"){
-  //     currArr.push(president)
-  //   }
-  //   return total + currArr.length;
-  // },0)
 }
 
 // Bonus: Iteration 8 | Sort Presidents by Name - `sort()`
